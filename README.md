@@ -1,24 +1,11 @@
-# data-vue
+# Real Estate Design
 
-## Project setup
-```
-npm install
-```
+## Description
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+This is a responsive landing page design for a fake real estate company. You can view a live version by clicking here. I might add to it later, but for now its just a design.
 
-### Compiles and minifies for production
-```
-npm run build
-```
+This was created with the Vue CLI. If you download or clone this repo, you need to run ```npm install``` and then ```npm run serve``` to make it work on your computer. 
 
-### Lints and fixes files
-```
-npm run lint
-```
+## Legal info
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+MIT Licence 2020 Matt Groberg
