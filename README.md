@@ -1,24 +1,10 @@
-# data-vue
+# Real Estate Design
 
-## Project setup
-```
-npm install
-```
+## Description
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+Responsive Design for a Fake Real estate company ("Fake Real", I know I know...). This project was created using the Vue cli with Babel and Webpack. You can view a live version by clicking [here](https://grobergm.github.io/real-estate-design)
 
-### Compiles and minifies for production
-```
-npm run build
-```
+## Legal Stuff
+MIT Liscence Matt Groberg 2020
 
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+This project uses Font-Awesome Icons, images from Unsplash, and a video from Coverr.
