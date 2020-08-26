@@ -10,13 +10,20 @@
 				<simple-icon :icon='rightArrow' />
 			</div>
 		</div>
+		<img
+			v-if='videoLoad === false'
+			src='@/assets/img/room-placeholder.jpg'
+			alt='image of sunlit room'
+		>
 		<video
 			autoplay
 			loop
 			muted
 			playsinline
 			src='@/assets/media/room.mp4'
+			@loadeddata='videoLoad = true'
 		></video>
+
 		<house-form />
 
 	</div>
@@ -34,6 +41,7 @@ export default {
 	data: function () {
 		return {
 			rightArrow,
+			videoLoad: false,
 		};
 	},
 	components: {
@@ -46,7 +54,7 @@ export default {
 
 <style scoped>
 .hero {
-	height: 600px;
+	height: 37.5em;
 	color: white;
 	/* margin-bottom: 1em; */
 	/* color: rgb(0, 0, 10); */
@@ -60,16 +68,17 @@ export default {
 	/* transform: translateY(-50%); */
 }
 
-.hero video {
+video,
+img {
 	position: absolute;
 	left: 0;
 	top: 0;
 	object-fit: cover;
 	width: 100%;
-	height: 600px;
+	height: 37.5em;
 }
 
-.hero p {
+p {
 	font-size: 1.5em;
 	margin-top: 0;
 }

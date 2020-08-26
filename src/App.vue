@@ -1,12 +1,14 @@
 <template>
 	<div>
 		<nav-bar />
-		<router-view></router-view>
+		<landing />
+		<!-- <router-view></router-view> -->
 	</div>
 </template>
 
 <script>
 import NavBar from "./components/NavBar";
+import Landing from "./components/pages/Landing";
 
 export default {
 	name: "app",
@@ -17,6 +19,7 @@ export default {
 
 	components: {
 		NavBar,
+		Landing,
 	},
 
 	computed: {},
@@ -60,6 +63,7 @@ html {
 	margin: 0;
 	font-family: "SourceSansPro";
 	scroll-behavior: smooth;
+	font-size: 16px;
 }
 
 h1,
@@ -75,6 +79,12 @@ h1 {
 
 .wrapper {
 	position: relative;
+}
+
+.flex-wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
 .dark_background {
@@ -124,7 +134,7 @@ h1 {
 	position: absolute;
 	bottom: 0;
 	left: 0;
-	height: 3px;
+	height: 0.1em;
 	width: 100%;
 	background: currentColor;
 	transform: translateX(-101%);
@@ -146,5 +156,12 @@ button {
 	display: flex;
 	align-items: center;
 	/* border: 1px solid rgb(10, 10, 20); */
+}
+
+@media screen and (max-width: 500px) {
+	html,
+	body {
+		font-size: 12px;
+	}
 }
 </style>

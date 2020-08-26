@@ -30,21 +30,24 @@
 								id='city'
 							>
 						</div>
-						<div class='form-group half-width'>
-							<label for='state'>State</label>
-							<input
-								type='text'
-								v-model='state'
-								id='state'
-							>
-						</div>
-						<div class='form-group'>
-							<label for='zip'>Zip Code</label>
-							<input
-								type='text'
-								v-model='zip'
-								id='zip'
-							>
+						<div class='flex-wrapper'>
+							<div class='form-group third-width'>
+								<label for='state'>State</label>
+								<input
+									type='text'
+									v-model='state'
+									id='state'
+								>
+							</div>
+							<div class='form-group two-third'>
+								<label for='zip'>Zip Code</label>
+								<input
+									type='text'
+									v-model='zip'
+									id='zip'
+								>
+							</div>
+
 						</div>
 
 					</div>
@@ -127,25 +130,28 @@
 				<div class='flexible-grid'>
 
 					<h2>Size</h2>
-					<div class='form-group'>
-						<label for='bed'>Bed</label>
-						<input
-							type='number'
-							min='0'
-							max='10'
-							v-model='bed'
-							id='bed'
-						>
-					</div>
-					<div class='form-group'>
-						<label for='bath'>Bath</label>
-						<input
-							type='number'
-							min='0'
-							max='5'
-							v-model='bath'
-							id='bath'
-						>
+					<div class='flex-wrapper'>
+						<div class='form-group half-width'>
+							<label for='bed'>Bed</label>
+							<input
+								type='number'
+								min='0'
+								max='10'
+								v-model='bed'
+								id='bed'
+							>
+						</div>
+						<div class='form-group half-width'>
+							<label for='bath'>Bath</label>
+							<input
+								type='number'
+								min='0'
+								max='5'
+								v-model='bath'
+								id='bath'
+							>
+						</div>
+
 					</div>
 
 					<div class='form-group'>
@@ -354,6 +360,7 @@ export default {
 	left: 0;
 	right: 0;
 	margin: 0 4em;
+	max-width: 1300px;
 	/* width: 100%; */
 }
 
@@ -384,12 +391,9 @@ export default {
 
 .tab-view {
 	background: white;
-	/* height: 220px; */
 	border-radius: 0 10px 10px 10px;
 	padding: 1em 2em;
 	color: rgb(0, 0, 10);
-
-	/* width: 500px; */
 }
 
 .location-form {
@@ -406,17 +410,16 @@ export default {
 	flex-direction: column;
 }
 
-input[type="text"],
+/* input[type="text"],
 input[type="number"],
 select {
 	height: 2em;
-}
+} */
 
 .outline {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 2em;
 	border: 1px solid rgb(0, 0, 10);
 	border-radius: 10px;
 	cursor: pointer;
@@ -431,34 +434,45 @@ select {
 .flexible-grid {
 	display: grid;
 	grid-gap: 0.5em;
-	grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(5em, 1fr));
+	/* grid-template-columns: repeat(auto-fit, 1fr); */
+	/* grid-auto-rows: 2em; */
 	align-items: center;
+
 	/* justify-items: center; */
 }
-
 .flexible-grid h2 {
-	justify-self: center;
+	justify-self: flex-end;
+	margin-right: 1em;
+}
+
+.half-width {
+	width: 48%;
+}
+
+.third-width {
+	width: 32%;
+}
+
+.two-third {
+	width: 62%;
 }
 
 .surroundings {
 	margin-left: 1em;
 }
 
-.half-width {
-	grid-column: span 1;
-	/* width: 50px; */
-}
-
 .large-flex-grid {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+	grid-gap: 0.5em;
 }
 
-.contact-form {
+/* .contact-form {
 	display: grid;
 	grid-gap: 0.5em;
 	grid-template-columns: 1fr 9.5em 9.5em;
-}
+} */
 
 .cta-btn {
 	margin: 1em;
@@ -473,5 +487,13 @@ select {
 	.house-form {
 		margin: 0;
 	}
+
+	.tab {
+		padding: 0.5em;
+	}
+	/*
+	.flexible-grid {
+		grid-template-columns: repeat(auto-fill, minmax(5em, 1fr));
+	} */
 }
 </style>

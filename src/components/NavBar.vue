@@ -5,13 +5,13 @@
 		</div>
 		<div class='links'>
 			<div class='underline'>
-				<router-link to='#featured'>Featured</router-link>
+				<a href='#featured'>Featured</a>
 			</div>
 			<div class='underline'>
-				<router-link to='#about'>About</router-link>
+				<a href='#about'>About</a>
 			</div>
 			<div class='underline'>
-				<router-link to='#contact'>Contact</router-link>
+				<a href='#contact'>Contact</a>
 			</div>
 		</div>
 		<div class='auth-links'>
@@ -52,7 +52,7 @@ nav {
 	top: 0;
 	left: 0;
 	right: 0;
-	padding: 1em;
+	padding: 1em 0;
 	background: rgba(0, 0, 10, 0.8);
 	color: white;
 	font-weight: bold;

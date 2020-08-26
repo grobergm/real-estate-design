@@ -16,7 +16,7 @@
 				</div>
 			</div>
 
-			<h2 class='main-title'>Recommended Houses</h2>
+			<h2 class='main-title'>Listings</h2>
 			<div class='house-grid'>
 				<div
 					v-for='(house, index) in houseList.slice(1)'
@@ -199,7 +199,7 @@ export default {
 <style scoped>
 .house-list {
 	padding-top: 6em;
-	padding-bottom: 1em;
+	padding-bottom: 2em;
 }
 
 .main-title {
@@ -210,7 +210,7 @@ export default {
 
 .grid-wrapper {
 	display: grid;
-	grid-template-columns: minmax(400px, 1fr) 2fr;
+	grid-template-columns: minmax(25em, 1fr) 2fr;
 	grid-template-rows: 4em 1fr;
 	grid-gap: 0.5em;
 }
@@ -222,11 +222,11 @@ export default {
 .house-grid {
 	position: relative;
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-	grid-auto-rows: 200px;
+	grid-template-columns: repeat(auto-fit, minmax(12em, 1fr));
+	grid-auto-rows: 12em;
 	grid-gap: 0.5em;
 	overflow: auto;
-	height: 432px;
+	height: 30em;
 	/* background: white; */
 }
 
@@ -244,15 +244,15 @@ img {
 }
 
 .selected img {
-	height: 300px;
+	height: 20em;
 }
 
 .house img {
-	height: 200px;
+	height: 12em;
 }
 
 .body {
-	height: 168px;
+	height: 12em;
 	padding: 1em;
 	color: rgb(0, 0, 10);
 	background: white;
@@ -263,18 +263,18 @@ img {
 	margin-bottom: 1em;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 650px) {
 	.grid-wrapper {
 		grid-template-columns: 1fr;
 	}
 	.house-grid {
 		display: flex;
-		/* grid-auto-rows: 200px; */
-		height: 230px;
+		height: 12em;
+		padding: 0 2em;
 	}
 
 	.house img {
-		width: 200px;
+		width: 12em;
 	}
 }
 </style>
