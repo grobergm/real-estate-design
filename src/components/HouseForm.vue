@@ -40,7 +40,7 @@
 								>
 							</div>
 							<div class='form-group two-third'>
-								<label for='zip'>Zip Code</label>
+								<label for='zip'>Zip</label>
 								<input
 									type='text'
 									v-model='zip'
@@ -75,17 +75,17 @@
 								<input
 									type='checkbox'
 									name=''
-									id='biking'
+									id='hiking'
 								>
-								<label for='biking'>River Access</label>
+								<label for='hiking'>Hiking</label>
 							</div>
 							<div>
 								<input
 									type='checkbox'
 									name=''
-									id='biking'
+									id='bike'
 								>
-								<label for='biking'>Bicycle Friendly</label>
+								<label for='bike'>Bicycle</label>
 							</div>
 							<div>
 								<input
@@ -93,16 +93,16 @@
 									name=''
 									id='schools'
 								>
-								<label for='schools'>Close to Schools</label>
+								<label for='schools'>Schools</label>
 
 							</div>
 							<div>
 								<input
 									type='checkbox'
 									name=''
-									id='biking'
+									id='shopping'
 								>
-								<label for='biking'>Near Shopping</label>
+								<label for='shopping'>Shops</label>
 							</div>
 
 							<!-- </div> -->
@@ -115,7 +115,7 @@
 				class='large-flex-grid'
 				v-if='step === 1'
 			>
-				<div class='flexible-grid'>
+				<div class='four-col'>
 					<h2>Types</h2>
 					<div
 						v-for='name in Object.keys(types)'
@@ -127,7 +127,7 @@
 						{{name}}
 					</div>
 				</div>
-				<div class='flexible-grid'>
+				<div class='four-col'>
 
 					<h2>Size</h2>
 					<div class='flex-wrapper'>
@@ -171,7 +171,7 @@
 						>
 					</div>
 				</div>
-				<div class='flexible-grid'>
+				<div class='four-col'>
 					<h2>Value</h2>
 					<div class='form-group span2'>
 						<label for='min'>Min Price</label>
@@ -204,7 +204,7 @@
 				v-if='step === 2'
 				class='large-flex-grid'
 			>
-				<div class='flexible-grid'>
+				<div class='three-col'>
 					<h2>Name</h2>
 					<div class='form-group'>
 						<label for='first'>First</label>
@@ -223,7 +223,7 @@
 						>
 					</div>
 				</div>
-				<div class='flexible-grid'>
+				<div class='three-col'>
 					<h2>Contact</h2>
 					<div class='form-group'>
 						<label for='phone'>Phone</label>
@@ -242,7 +242,7 @@
 						>
 					</div>
 				</div>
-				<div class='flexible-grid'>
+				<div class='three-col'>
 					<h2>Identity</h2>
 					<div class='form-group'>
 						<label for='age'>Age</label>
@@ -442,8 +442,19 @@ select {
 	/* justify-items: center; */
 }
 .flexible-grid h2 {
-	justify-self: flex-end;
-	margin-right: 1em;
+	justify-self: center;
+	/* margin-right: 1em; */
+}
+
+.four-col {
+	display: grid;
+	grid-gap: 0.5em;
+	grid-template-columns: repeat(4, 5em);
+}
+.three-col {
+	display: grid;
+	grid-gap: 0.5em;
+	grid-template-columns: repeat(3, 6.5em);
 }
 
 .half-width {
@@ -451,11 +462,11 @@ select {
 }
 
 .third-width {
-	width: 32%;
+	width: 35%;
 }
 
 .two-third {
-	width: 62%;
+	width: 60%;
 }
 
 .surroundings {
@@ -464,8 +475,9 @@ select {
 
 .large-flex-grid {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(21em, 1fr));
 	grid-gap: 0.5em;
+	justify-items: center;
 }
 
 /* .contact-form {
@@ -489,6 +501,10 @@ select {
 	}
 
 	.tab {
+		padding: 0.5em;
+	}
+
+	.tab-view {
 		padding: 0.5em;
 	}
 	/*
